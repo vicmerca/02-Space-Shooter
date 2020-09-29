@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Death/DeathScreen.gd" type="Script" id=1]
+[ext_resource path="res://Assets/level1.jpg" type="Texture" id=2]
+
+[node name="DeathScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="level1" type="Sprite" parent="."]
+position = Vector2( -520.579, 150.943 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="YouDied" type="Label" parent="."]
+margin_left = 323.306
+margin_top = 98.0575
+margin_right = 387.306
+margin_bottom = 112.057
+rect_scale = Vector2( 6, 6 )
+text = "You Died"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayAgain" type="Button" parent="."]
+margin_left = 354.605
+margin_top = 326.762
+margin_right = 431.606
+margin_bottom = 346.762
+rect_scale = Vector2( 4, 4 )
+text = "Play Again"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="PlayAgain" to="." method="_on_PlayAgain_pressed"]
